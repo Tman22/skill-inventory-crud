@@ -1,0 +1,7 @@
+<h1 class="center-align"> Editing Task: </h1>
+<form class="center-align" action= "/skills/<%= @skill.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input id="name_edit" type= "text" name="skill[title]" value="<%= @skill.title %>" /><br/>
+  <textarea id="details_edit" name="skill[details]"> <%= @skill.details %></textarea><br/>
+  <input type="submit" value="submit" />
+</form>

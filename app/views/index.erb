@@ -1,0 +1,12 @@
+<h1 class="center-align">Skill Base</h1>
+
+<% @skills.each do |skill| %>
+
+<h3 class="center-align"><a href="/skills/<%=skill.id %>"><%= skill.title %></a></h3>
+<div id="buttons-<%=skill.id%>" class="center-align"><a href="/skills/<%=skill.id%>/edit">Edit</a>
+<form action="/skills/<%= skill.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit" value="delete" class="waves-effect waves-yellow btn-flat">Delete</button>
+</form>
+</div>
+<% end %>
